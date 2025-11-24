@@ -1,6 +1,6 @@
 # 🧬 Mutant Detector API - Guía Completa para Estudiantes
 
-[![Java](https://img.shields.io/badge/Java-17-orange.svg)](https://www.oracle.com/java/)
+[![Java](https://img.shields.io/badge/Java-21-orange.svg)](https://www.oracle.com/java/)
 [![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.2.0-brightgreen.svg)](https://spring.io/projects/spring-boot)
 [![Gradle](https://img.shields.io/badge/Gradle-8.x-blue.svg)](https://gradle.org/)
 [![Tests](https://img.shields.io/badge/Tests-35%20passing-success.svg)]()
@@ -27,8 +27,7 @@
 13. [Optimizaciones Implementadas](#-optimizaciones-implementadas)
 14. [Conceptos Clave para Aprender](#-conceptos-clave-para-aprender)
 15. [Ejercicios Propuestos](#-ejercicios-propuestos)
-16. [Recursos Adicionales](#-recursos-adicionales)
-
+16. [Demo y Despliegue](#-demo-y-despliegue)
 ---
 
 ## 🎯 ¿Qué es este proyecto?
@@ -731,6 +730,12 @@ Resultado: NO ES MUTANTE ❌
 ## 🏗 Arquitectura del Proyecto
 
 Este proyecto sigue una **arquitectura en capas** muy común en aplicaciones Spring Boot profesionales.
+
+### Diagrama de Secuencia
+
+El siguiente diagrama ilustra el flujo de una petición `POST /mutant`, mostrando cómo el sistema optimiza las búsquedas utilizando un **Hash SHA-256** y caché en base de datos para evitar re-procesar ADNs ya analizados.
+
+![Diagrama de Secuencia](diagrama-secuencia.png)
 
 ### Diagrama de Capas
 
@@ -2484,39 +2489,17 @@ Configura PostgreSQL en Docker y migra desde H2.
 
 ---
 
-## 📚 Recursos Adicionales
+## 🚀 Demo y Despliegue
 
-### Documentación Oficial
+El proyecto se encuentra desplegado en **Render** y está listo para ser probado públicamente.
 
-- [Spring Boot Docs](https://docs.spring.io/spring-boot/docs/current/reference/html/)
-- [Spring Data JPA](https://docs.spring.io/spring-data/jpa/docs/current/reference/html/)
-- [Swagger/OpenAPI](https://swagger.io/docs/)
-- [Lombok](https://projectlombok.org/features/)
-- [JUnit 5](https://junit.org/junit5/docs/current/user-guide/)
+| Servicio | URL | Descripción |
+|----------|-----|-------------|
+| **API URL** | [https://mutant-api-1n0c.onrender.com](https://mutant-api-1n0c.onrender.com) | URL Base del servicio |
+| **Swagger UI** | [Documentación Interactiva](https://mutant-api-1n0c.onrender.com/swagger-ui/index.html) | Interfaz gráfica para probar endpoints |
+| **H2 Console** | [Consola Base de Datos](https://mutant-api-1n0c.onrender.com/h2-console) | Acceso a BD (User: `sa`, Pass: vacío) |
 
-### Tutoriales
-
-- [Baeldung - Spring Boot](https://www.baeldung.com/spring-boot)
-- [Spring Guides](https://spring.io/guides)
-- [REST API Design](https://restfulapi.net/)
-
-### Herramientas
-
-- [IntelliJ IDEA](https://www.jetbrains.com/idea/)
-- [Postman](https://www.postman.com/)
-- [DBeaver](https://dbeaver.io/) (Cliente SQL)
-
----
-
-## 🤝 Contribución
-
-¿Encontraste un bug? ¿Tienes una mejora? ¡Pull requests son bienvenidos!
-
-1. Fork el proyecto
-2. Crea tu rama: `git checkout -b feature/AmazingFeature`
-3. Commit: `git commit -m 'Add some AmazingFeature'`
-4. Push: `git push origin feature/AmazingFeature`
-5. Abre un Pull Request
+> **Nota:** Al estar en el plan gratuito de Render, el servicio puede tardar unos 50 segundos en "despertar" si ha estado inactivo.
 
 ---
 
@@ -2525,20 +2508,3 @@ Configura PostgreSQL en Docker y migra desde H2.
 Este proyecto es de código abierto bajo la licencia MIT.
 
 ---
-
-## 🙏 Créditos
-
-- **MercadoLibre** - Por el desafío técnico
-- **Spring Team** - Por el increíble framework
-- **Project Lombok** - Por reducir boilerplate
-- **Comunidad Open Source** - Por todas las librerías
-
----
-
-<div align="center">
-
-## ⭐ Si este proyecto te ayudó a aprender, considera darle una estrella ⭐
-
-**Hecho con ❤️ para estudiantes de programación**
-
-</div>
